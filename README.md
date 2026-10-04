@@ -30,6 +30,20 @@ flowchart TD
 
 ---
 
+## 💻 Infrastructure & Software Technology Stack
+
+| Layer | Technology & Tools | Production Role |
+|---|---|---|
+| **GPU Hardware & Fabric** | 4x NVIDIA H100 (80GB SXM5), 400Gbps InfiniBand | High-bandwidth inter-expert communication and FP8 Tensor Core throughput |
+| **Serving Runtime Engine** | SGLang v0.4+ (RadixAttention & MoE Paging) | Prefix tree cache sharing across multi-turn queries, reducing TTFT by 4x |
+| **Distributed Parallelism**| DeepSpeed-MoE, Megatron-LM, PyTorch 2.4 | Tensor Parallelism (TP=4) combined with Expert Parallelism (EP=4) |
+| **Mixture-of-Experts Router**| Top-8 Sparse Gating, Aux-Loss-Free Bias Adjustment | Dynamically routes tokens to 8 of 64 experts without artificial loss penalties |
+| **Bilingual Tokenizer Engine**| TikToken Extended CJK Vocabulary | Native Chinese character compression saving >50% token cost and KV memory |
+| **Kernel Optimizations** | FlashAttention-3, Triton FP8 MoE Kernels | Specialized fused GEMM and scatter-gather memory access for active experts |
+| **Cluster Orchestrator** | Kubernetes 1.30+, KubeRay / RayServe | Elastic GPU worker node scaling and zero-downtime serving rollouts |
+
+---
+
 ## 🚀 What's Inside
 
 | File | Purpose |
