@@ -1,3 +1,6 @@
+[![Ecosystem](https://img.shields.io/badge/Portfolio%20Ecosystem-341%20Studios-6366f1.svg)](https://pradeeptalari.me/projects/)
+[![Architecture DAG](https://img.shields.io/badge/Architecture-DAG%20%26%20Course-10b981.svg)](https://pradeeptalari.me/tools/repo-learning/)
+
 # 01.AI Yi-Lightning MoE Reference Runtime (`tp-yi-lightning-moe`)
 
 [![CI](https://github.com/Pradeeptalari14/tp-yi-lightning-moe/actions/workflows/moe-ci.yml/badge.svg)](https://github.com/Pradeeptalari14/tp-yi-lightning-moe/actions)
@@ -85,3 +88,6 @@ python -m sglang.launch_server --model-path <open-moe-model> \
 ## 📄 License & Security
 
 MIT — see [LICENSE](LICENSE) and [SECURITY.md](SECURITY.md).
+
+---
+*Synchronized with [01.AI Yi-Lightning MoE Studio Studio](https://pradeeptalari.me/tools/yi-lightning-moe/) & [Repository Learning DAG](https://pradeeptalari.me/tools/repo-learning/) — [Talari Pradeep Portfolio](https://pradeeptalari.me)*
